@@ -1,0 +1,5 @@
+<div class="square" (click) ="toggleClicked()" >
+    <span *ngIf="!clicked && initalState" ></span>
+    <span *ngIf="clicked" >x</span>
+    <span *ngIf="!clicked && !initalState" >o</span>
+</div>
