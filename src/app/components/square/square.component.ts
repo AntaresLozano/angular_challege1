@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-square',
@@ -9,12 +9,17 @@ export class SquareComponent {
 
   initalState = true;
   clicked = false;
-
+  @Input() state = ''
 
   toggleClicked() {
     this.initalState = false
     this.clicked = !this.clicked
-    console.log(this.clicked)
+    if(this.clicked){
+      this.state = 'x'
+    }else{
+      this.state = 'o'
+    }
+
   }
 
 }
